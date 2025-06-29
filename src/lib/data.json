@@ -1,0 +1,92 @@
+{
+  "issues": [
+    {
+      "id": 1,
+      "title": "Optimize database query performance for user search",
+      "description": "The user search functionality is experiencing slow response times due to inefficient database queries. Need to add proper indexing and optimize the search algorithm to handle large user datasets.",
+      "status": "open",
+      "createdAt": "2024-01-13T00:00:00.000Z",
+      "priority": "medium"
+    },
+    {
+      "id": 2,
+      "title": "Fix authentication bug in login form",
+      "description": "Users are unable to login with valid credentials. The authentication service returns a 401 error even with correct username and password.",
+      "status": "open",
+      "createdAt": "2024-01-15T00:00:00.000Z",
+      "priority": "high"
+    },
+    {
+      "id": 3,
+      "title": "Implement dark mode toggle",
+      "description": "Add a dark mode feature to improve user experience during night time usage. Should persist user preference in localStorage.",
+      "status": "in-progress",
+      "createdAt": "2024-01-12T00:00:00.000Z",
+      "priority": "medium"
+    },
+    {
+      "id": 4,
+      "title": "Database migration for user profiles",
+      "description": "Create migration scripts to add new fields to user profile table: avatar_url, bio, and social_links.",
+      "status": "closed",
+      "createdAt": "2024-01-10T00:00:00.000Z",
+      "priority": "medium"
+    },
+    {
+      "id": 5,
+      "title": "Performance optimization for dashboard",
+      "description": "Dashboard takes too long to load with large datasets. Need to implement pagination and lazy loading for better performance.",
+      "status": "open",
+      "createdAt": "2024-01-18T00:00:00.000Z",
+      "priority": "high"
+    },
+    {
+      "id": 6,
+      "title": "Add unit tests for API endpoints",
+      "description": "Write comprehensive unit tests for all REST API endpoints to ensure reliability and catch regressions early.",
+      "status": "in-progress",
+      "createdAt": "2024-01-08T00:00:00.000Z",
+      "priority": "medium"
+    },
+    {
+      "id": 7,
+      "title": "Update documentation for new features",
+      "description": "Update user documentation and API docs to reflect the new features added in version 2.1.0.",
+      "status": "open",
+      "createdAt": "2024-01-20T00:00:00.000Z",
+      "priority": "low"
+    },
+    {
+      "id": 8,
+      "title": "Fix mobile responsive layout issues",
+      "description": "Several pages have layout issues on mobile devices. Navigation menu overlaps content and buttons are too small to tap.",
+      "status": "open",
+      "createdAt": "2024-01-16T00:00:00.000Z",
+      "priority": "high"
+    },
+    {
+      "id": 9,
+      "title": "Implement email notifications",
+      "description": "Add email notification system for important events like password changes, account updates, and system maintenance.",
+      "status": "closed",
+      "createdAt": "2024-01-05T00:00:00.000Z",
+      "priority": "medium"
+    },
+    {
+      "id": 10,
+      "title": "Refactor legacy code in utils module",
+      "description": "Clean up and modernize the utilities module. Remove deprecated functions and improve code readability.",
+      "status": "in-progress",
+      "createdAt": "2024-01-14T00:00:00.000Z",
+      "priority": "low"
+    },
+    {
+      "id": 11,
+      "title": "Security audit for file upload feature",
+      "description": "Conduct security review of file upload functionality to prevent malicious file uploads and ensure proper validation.",
+      "status": "open",
+      "createdAt": "2024-01-22T00:00:00.000Z",
+      "priority": "high"
+    }
+  ]
+}
