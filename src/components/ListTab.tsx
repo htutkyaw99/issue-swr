@@ -3,23 +3,30 @@ import { useIssues } from "../lib/queries";
 import IssueCard from "./IssueCard";
 import useDateSortStore from "../stores/dateStore";
 import { useMemo } from "react";
-import usePrioritySortStore from "../stores/priorityStore";
+
+import useSearchStore from "../stores/searchStore";
 
 const ListTab = () => {
   const { data: issues, error, isLoading } = useIssues();
 
   const { dateSort: dateOorder } = useDateSortStore();
 
+  const { search } = useSearchStore();
+
   const sortedIssues = useMemo(() => {
     if (!issues) return [];
 
-    return [...issues].sort((a, b) => {
+    const filtered = issues.filter((issue) =>
+      issue.title.toLowerCase().includes(search.toLowerCase())
+    );
+
+    return filtered.sort((a, b) => {
       const dateA = new Date(a.createdAt).getTime();
       const dateB = new Date(b.createdAt).getTime();
 
       return dateOorder === "asc" ? dateA - dateB : dateB - dateA;
     });
-  }, [issues, dateOorder]);
+  }, [issues, dateOorder, search]);
 
   if (isLoading) return <Text>Loading...</Text>;
 
