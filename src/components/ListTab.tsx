@@ -16,33 +16,11 @@ const ListTab = () => {
   const closed = issues?.filter((issue) => issue.status === "closed");
 
   return (
-    <Tabs.Root defaultValue="issues">
-      <Tabs.List size={"2"}>
-        <Tabs.Trigger value="issues">All</Tabs.Trigger>
-        <Tabs.Trigger value="inprogress">Pending</Tabs.Trigger>
-        <Tabs.Trigger value="closed">Closed</Tabs.Trigger>
-      </Tabs.List>
-
-      <Box pt="3">
-        <Tabs.Content value="issues">
-          {issues?.map((issue) => (
-            <IssueCard key={issue.id} issue={issue} />
-          ))}
-        </Tabs.Content>
-
-        <Tabs.Content value="inprogress">
-          {inprogress?.map((issue) => (
-            <IssueCard key={issue.id} issue={issue} />
-          ))}
-        </Tabs.Content>
-
-        <Tabs.Content value="closed">
-          {closed?.map((issue) => (
-            <IssueCard key={issue.id} issue={issue} />
-          ))}
-        </Tabs.Content>
-      </Box>
-    </Tabs.Root>
+    <Box pt="3">
+      {issues?.map((issue) => (
+        <IssueCard key={issue.id} issue={issue} />
+      ))}
+    </Box>
   );
 };
 
