@@ -13,7 +13,9 @@ const Status = ({ status }: { status: StatusType }) => {
         className="w-3 h-3 rounded-full"
         style={{ backgroundColor: color }}
       />
-      <Text size={"2"}>{status}</Text>
+      <Text size={"2"} weight={"medium"} className="uppercase">
+        {status}
+      </Text>
     </Flex>
   );
 };
